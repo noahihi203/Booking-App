@@ -15,7 +15,7 @@ async function checkAuth() {
     const user = await account.get();
     return {
       isAuthenticated: true,
-      use: {
+      user: {
         id: user.$id,
         name: user.name,
         email: user.email,

@@ -17,7 +17,8 @@ async function destroySession() {
     //Delete current session
     await account.deleteSession("current");
     //Clear session cookie
-    cookies().delete("appwrite_session");
+    const cookieStore = await cookies();
+    cookieStore.delete("appwrite_session");
     return {
       success: true,
     };
