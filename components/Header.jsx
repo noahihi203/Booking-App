@@ -15,7 +15,6 @@ const Header = () => {
     const { success, error } = await destroySession();
     if (success) {
       setIsAuthenticated(false);
-      console.log("Noah check success", success);
       router.push("/login");
     } else {
       toast.error(error);
