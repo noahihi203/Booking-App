@@ -56,7 +56,7 @@ async function createRoom(previousState, formData) {
   } catch (error) {
     console.log(error);
     const errorMessage =
-      error.response.message || "An unexpected error occurred";
+      error.response?.message || "An unexpected error occurred";
     return {
       error: errorMessage,
     };
